@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeaherApp</title>
+    <link rel="icon" href="./images/rainy.png">
+    <link class="themeSelect" rel="stylesheet" href="./style/themes/default.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to WeatherApp!</h1>
+    </header>
+    
+    <div class="weatherBlock">
+        <form method="dialog" class="weatherForm">
+            <p class="timeDisplay">00:00</p>
+            <div>
+                <input class="cityInput" type="text" placeholder="Enter city">
+                <p class="underline"></p>
+            </div>
+            <button class="cityInputBtn" type="submit"><i class="fas fa-location-arrow"></i></button>
+        </form>
+
+        <div class="weatherCard" hidden>
+            <h1 class="nodisplay cityName">City name</h1>
+            <div class="innerWeatherCard">
+                <div>
+                    <p class="nodisplay weatherIcon"><i class="fas fa-cloud"></i></p>
+                </div>
+                <div>
+                    <p class="nodisplay temperature"></p>
+                    <p class="nodisplay humidity"></p>
+                    <p class="nodisplay type"></p>
+                </div>
+            </div>
+            <ul>
+                <li class="nodisplay tempHighLow"></li>
+                <li class="nodisplay tempFeelLike"></li>
+                <li class="nodisplay pressure"></li>
+                <li class="nodisplay wind"></li>
+            </ul>
+        </div>
+
+        <div class="weatherError">
+            <p class="errors"></p>
+        </div>
+    </div>
+
+    <script type="module" src="./scripts/index.js"></script>
+</body>
+</html>

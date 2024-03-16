@@ -1,0 +1,13 @@
+:root {
+    --bgColor: linear-gradient(140deg, 
+    #42009c 0%,
+    #00f4ff 100%);
+    --txtColor: #fff;
+    --boxBgColor: linear-gradient(140deg, 
+    #0a0018 0%,
+    #000a11 100%);
+    --boxTxtColor: #fff;
+    --boxBorderColor: #fff;
+    --boxBorderActionColor: #bebebe;
+    --errorColor: #00f4ff;
+}

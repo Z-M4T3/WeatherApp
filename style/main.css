@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+    height: 100dvh;
+    width: 100dvw;
+
+    overflow: hidden;
+
+    background: var(--bgColor);
+    background-size: 400%;
+    background-attachment: fixed;
+
+    color: var(--txtColor);
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    animation: bgGradient 20s ease infinite;
+}
+
+.weatherBlock {
+    background: var(--boxBgColor);
+    color: var(--boxTxtColor);
+
+    padding: 10%;
+    height: 8%;
+
+    border-radius: 60px;
+
+    overflow: hidden;
+
+    animation: cardAnimate 1s ease-in-out;
+}
+
+.weatherBlockExt {
+    background: var(--boxBgColor);
+    color: var(--boxTxtColor);
+
+    padding: 10%;
+    height: 40%;
+
+    border-radius: 60px;
+
+    overflow: hidden;
+
+    animation: cardAnimateExt 1s ease-in-out;
+}
+
+.weatherForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 10dvw;
+}
+
+.timeDisplay {
+    font-weight: bolder;
+}
+
+.cityInput {
+    position: relative;
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+
+    background: transparent;
+    color: var(--boxTxtColor);
+    outline: none;
+
+    padding: 6px;
+
+    border: 0;
+    border-radius: 10px;
+
+    
+    transition-duration: 100ms;
+}
+
+.cityInput:focus {
+    animation: lineAnimate 1s ease;
+}
+
+.underline {
+    margin: 5px 0 0 5px;
+    
+    background-color: #fff;
+    display: block;
+     
+    position: relative;
+
+    animation: lineAnimateIn 1.5s ease;
+}
+
+.underline::after {
+    content: "";
+    width: 80%;
+    height: 2px;
+    
+    background-color: #fff;
+    display: block;
+     
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.cityInputBtn {
+    background: transparent;
+    color: var(--boxTxtColor);
+    font-size: x-large;
+
+    cursor: pointer;
+    padding: 5px;
+
+    border: 0;
+
+    transition-duration: 200ms;
+}
+
+.cityInputBtn:hover {
+    color: var(--boxBorderActionColor);
+}
+
+.weatherCard {
+    text-align: left;
+}
+
+.weatherCard h1 {
+    text-align: center;
+}
+
+.innerWeatherCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.weatherIcon {
+    font-size: 5em;
+    padding: 0 80px 0 0;
+    margin: 0;
+}
+
+.nodisplay {
+    visibility: hidden;
+}
+
+.ondisplay {
+    visibility: visible;
+
+    opacity: 100%;
+
+    animation: displayItem 1s ease-in-out;
+}
+
+.errorDisplay {
+    opacity: 100%;
+    animation: displayError 1s ease-in-out;
+}
+
+@keyframes bgGradient {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+
+@keyframes lineAnimateIn {
+    0% {
+        width: 0%;  
+    }
+    100% {
+        width: 100%;  
+    }
+}
+
+@keyframes cardAnimate {
+    0% {
+        height: 0%;
+    }
+
+    100% {
+        height: 8%;
+    }
+}
+
+@keyframes cardAnimateExt {
+    0% {
+        height: 8%;
+    }
+
+    100% {
+        height: 40%;
+    }
+}
+
+@keyframes displayItem {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes displayError {
+    0% {
+        opacity: 0%;
+        color: var(--boxTxtColor);
+    }
+
+    50% {
+        opacity: 100%;
+        color: var(--errorColor); 
+    }
+
+    100% {
+        color: var(--boxTxtColor);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html, body {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    html, body {
+        font-size: .8rem;
+    }
+}
