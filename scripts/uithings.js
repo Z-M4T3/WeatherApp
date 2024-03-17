@@ -56,14 +56,3 @@ export function extendCard(city, country, icon, temp, humidity, description, fee
 
     setTimeout(1500, revealItems(displayItems));
 }
-
-export function pageLeave() {
-   switch (document.title) {
-    case "WeatherApp":
-        document.title = "For the current weather!";
-        break;
-    case "For the current weather!":
-        document.title ="WeatherApp";
-        break;
-   }
-}
